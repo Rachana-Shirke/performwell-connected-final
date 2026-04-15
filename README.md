@@ -313,3 +313,64 @@ Before final HR review, clean that repo.
 ---
 
 If you want, send repo screenshot next and I’ll tell you what to clean/remove to make it look professional.
+
+
+Employee Performance Management System (EPMS) – Project Documentation
+1. Project Overview
+The Employee Performance Management System (EPMS) is a web-based application designed to help organizations manage and improve employee performance in a structured and transparent way.
+
+This system allows managers, HR teams, and employees to track performance goals, conduct reviews, collect feedback, and monitor progress through a centralized dashboard.
+2. Business Problem
+Many organizations still manage employee performance using spreadsheets, emails, and manual review documents. This creates issues such as:
+• Lack of transparency in performance tracking
+• Difficulty monitoring employee goals
+• Delays in review and feedback processes
+• Inconsistent evaluation methods
+• Poor historical record management
+3. Proposed Solution
+EPMS digitizes the entire performance management workflow by providing one centralized platform where employees, managers, and HR can manage reviews, goals, feedback, and analytics.
+4. Project Objectives
+• Automate employee performance review workflows
+• Improve visibility of employee goals and progress
+• Enable data-driven performance analysis
+• Reduce manual HR workload
+• Maintain historical performance records
+5. Key Features
+Employee Management
+Goal Management
+Performance Reviews
+Feedback Module
+Analytics Dashboard
+AI Summary Generator
+6. User Roles
+Admin / HR
+Manager
+Employee
+7. Technology Stack
+Frontend: React.js, TypeScript, Tailwind CSS
+Backend: FastAPI (Python)
+Database: PostgreSQL
+Tools: Git, GitHub, pgAdmin, Postman
+8. High-Level Workflow
+1. HR/Admin creates employee records
+2. Managers assign goals
+3. Employees update progress
+4. Managers conduct reviews
+5. Feedback is collected
+6. Dashboard shows analytics
+7. AI generates summaries
+9. System Architecture
+Frontend UI → Backend API → PostgreSQL Database
+10. SDLC Approach
+Requirement Gathering → Planning → Design → Development → Testing → Deployment → Maintenance
+11. GitHub Project Management
+Repository for source code
+Issues for tasks/features
+Project Board for progress tracking
+12. Future Enhancements
+Email Notifications
+Advanced Reports
+PDF Export
+Mobile App Support
+13. Conclusion
+EPMS provides a scalable and efficient solution for digitizing employee performance processes and improving organizational performance management.
