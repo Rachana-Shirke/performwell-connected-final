@@ -1,0 +1,619 @@
+Understood — your task is **not coding right now**, it is **project management / SDLC documentation + GitHub setup**.
+
+You need to present the project professionally like an engineer, not just “code exists.”
+
+---
+
+# What You Need to Deliver
+
+You must prepare:
+
+1. **Project Documentation**
+2. **GitHub Repository**
+3. **GitHub Project Board**
+4. **Feature-wise Issues**
+5. **Task Assignments**
+6. **Progress Tracking**
+
+---
+
+# Step-by-Step Guide
+
+---
+
+# STEP 1 — Create Project Documentation
+
+Create these files/folders in your repo:
+
+```text
+/docs
+   Project_Overview.md
+   Architecture.md
+   API_Documentation.md
+   Database_Schema.md
+   Workflow.md
+README.md
+```
+
+---
+
+## What to Write
+
+### Project Overview
+
+Include:
+
+```markdown
+Project Name: Employee Performance Management System
+
+Description:
+A web-based platform to manage employee goals,
+performance reviews, feedback, and analytics.
+
+Objective:
+To digitize and automate employee performance tracking.
+
+Users:
+- Admin
+- Manager
+- Employee
+```
+
+---
+
+### Features
+
+List:
+
+```markdown
+- Employee Management
+- Goal Tracking
+- Performance Reviews
+- Feedback Module
+- Dashboard Analytics
+- AI Summary Generation
+- Authentication & Role Management
+```
+
+---
+
+### Tech Stack
+
+```markdown
+Frontend: React, TypeScript, Vite, Tailwind
+Backend: FastAPI, Python
+Database: PostgreSQL
+ORM: SQLAlchemy
+Version Control: Git/GitHub
+```
+
+---
+
+### Workflow / SDLC
+
+```markdown
+Requirement Gathering
+↓
+Planning
+↓
+Design
+↓
+Development
+↓
+Testing
+↓
+Deployment
+↓
+Maintenance
+```
+
+---
+
+# STEP 2 — Create GitHub Repository
+
+Go to GitHub
+
+Create Repo:
+
+### Recommended Name
+
+```text
+employee-performance-management-system
+```
+
+---
+
+## Add Initial Files
+
+Upload:
+
+* Frontend code
+* Backend code
+* Documentation folder
+* README.md
+
+---
+
+# STEP 3 — Create README.md Properly
+
+Template:
+
+```markdown
+# Employee Performance Management System
+
+## Overview
+Web application for managing employee performance reviews, goals, and analytics.
+
+## Features
+- Employee Management
+- Goals Tracking
+- Reviews
+- Feedback
+- AI Summary
+
+## Tech Stack
+- React
+- FastAPI
+- PostgreSQL
+
+## Setup Instructions
+### Frontend
+npm install
+npm run dev
+
+### Backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+---
+
+# STEP 4 — Create GitHub Project Board
+
+In GitHub Repo:
+
+Go to:
+
+```text
+Projects → New Project
+```
+
+Choose:
+
+```text
+Board Template
+```
+
+---
+
+## Board Columns
+
+Create:
+
+```text
+Backlog
+To Do
+In Progress
+Review
+Done
+```
+
+---
+
+# STEP 5 — Create Issues for Each Feature
+
+Go to:
+
+```text
+Issues → New Issue
+```
+
+---
+
+## Recommended Issues
+
+Create separate issue for each:
+
+```text
+Frontend Setup
+Backend Setup
+Database Schema Design
+Authentication Module
+Employee CRUD APIs
+Goal Management Module
+Performance Review Module
+Feedback Module
+Dashboard Analytics
+AI Summary Integration
+Testing & Bug Fixes
+Deployment Preparation
+Documentation
+```
+
+---
+
+# STEP 6 — Issue Description Format
+
+Example:
+
+### Title:
+
+```text
+Implement Employee CRUD APIs
+```
+
+### Description:
+
+```markdown
+Develop REST APIs for employee management:
+- Create Employee
+- Update Employee
+- Delete Employee
+- Fetch Employee List
+- Fetch Employee Details
+```
+
+---
+
+# STEP 7 — Assign Issues
+
+Assign yourself to every issue you own.
+
+Add:
+
+* Assignee → Yourself
+* Labels → backend / frontend / docs / testing
+
+---
+
+# STEP 8 — Connect Issues to Project Board
+
+Add each issue to board.
+
+Move according to progress:
+
+```text
+To Do → In Progress → Review → Done
+```
+
+---
+
+# STEP 9 — Maintain Professional Commit History
+
+Commit like this:
+
+```bash
+git commit -m "docs: add project overview and architecture documentation"
+git commit -m "feat: implement employee CRUD backend APIs"
+git commit -m "fix: resolve CORS issue in backend"
+```
+
+NOT:
+
+```bash
+final
+done
+updated
+changes
+```
+
+---
+
+# Suggested Professional Structure
+
+```text
+employee-performance-management-system/
+│
+├── frontend/
+├── backend/
+├── docs/
+│   ├── Project_Overview.md
+│   ├── Architecture.md
+│   ├── API_Documentation.md
+│   └── Database_Schema.md
+│
+├── README.md
+└── .gitignore
+```
+
+---
+
+# What HR / Manager Wants to See
+
+They want proof you understand:
+
+* SDLC Process
+* Documentation Standards
+* Task Planning
+* GitHub Workflow
+* Agile/Project Tracking
+
+Not just coding.
+
+---
+
+# My Advice
+
+Since your project already exists:
+
+### Do NOT create fake/random issues.
+
+Break them from your real EPMS project.
+
+---
+
+If you want, I can help you next with:
+
+> **Generating all documentation files for your project professionally**
+
+Just say:
+
+**"Create my project documentation"**
+
+and I’ll draft them for you.
+
+
+
+Absolutely — I can create the full documentation for you.
+
+Since your task is to set up **professional project documentation** for your Employee Performance Management System, here’s a ready-to-use documentation pack you can paste into your repo.
+
+---
+
+# README.md
+
+````markdown
+# Employee Performance Management System (EPMS)
+
+## Overview
+The Employee Performance Management System (EPMS) is a web-based platform designed to streamline and automate employee performance tracking, goal management, feedback collection, and review processes within an organization.
+
+## Objectives
+- Digitize employee performance evaluation workflows
+- Enable managers to track goals and reviews efficiently
+- Provide employees with transparent feedback and progress tracking
+- Generate AI-based performance summaries for review assistance
+
+## Features
+- Employee Management
+- Goal Tracking
+- Performance Review Management
+- Continuous Feedback Module
+- Dashboard Analytics
+- AI Summary Generation
+- Role-Based Authentication
+
+## Tech Stack
+### Frontend
+- React.js
+- TypeScript
+- Tailwind CSS
+- Vite
+
+### Backend
+- FastAPI
+- Python
+
+### Database
+- PostgreSQL
+
+### ORM / Tools
+- SQLAlchemy
+- Alembic
+- Git / GitHub
+
+## Project Structure
+employee-performance-management-system/
+├── frontend/
+├── backend/
+├── docs/
+└── README.md
+
+## Setup Instructions
+
+### Frontend
+```bash
+npm install
+npm run dev
+````
+
+### Backend
+
+```bash
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload
+```
+
+## Future Enhancements
+
+* Email Notifications
+* Performance Trend Reports
+* Team Comparison Analytics
+* Export Reviews to PDF
+
+````
+
+---
+
+# docs/Project_Overview.md
+
+```markdown
+# Project Overview
+
+## Project Name
+Employee Performance Management System
+
+## Description
+A centralized system for managing employee performance data, reviews, feedback, and goal progress.
+
+## Problem Statement
+Manual performance tracking through spreadsheets and documents causes inefficiency, inconsistency, and lack of transparency.
+
+## Proposed Solution
+Develop a digital web-based application to automate and centralize performance management processes.
+
+## Target Users
+- HR/Admin
+- Managers
+- Employees
+````
+
+---
+
+# docs/Architecture.md
+
+```markdown
+# System Architecture
+
+## Frontend Layer
+React-based user interface for employees, managers, and admins.
+
+## Backend Layer
+FastAPI REST API server handling business logic and data processing.
+
+## Database Layer
+PostgreSQL database storing employees, goals, reviews, feedback, and user roles.
+
+## Architecture Flow
+Frontend → API Requests → FastAPI Backend → PostgreSQL Database
+```
+
+---
+
+# docs/API_Documentation.md
+
+```markdown
+# API Documentation
+
+## Employee APIs
+- GET /employees
+- POST /employees
+- PUT /employees/{id}
+- DELETE /employees/{id}
+
+## Goal APIs
+- GET /goals
+- POST /goals
+- PUT /goals/{id}
+- DELETE /goals/{id}
+
+## Review APIs
+- GET /reviews
+- POST /reviews
+
+## Feedback APIs
+- GET /feedback
+- POST /feedback
+
+## AI Summary API
+- POST /ai/generate-summary
+```
+
+---
+
+# docs/Database_Schema.md
+
+```markdown
+# Database Schema
+
+## Employees Table
+- id
+- name
+- email
+- department
+- designation
+- manager_id
+- joining_date
+- status
+
+## Goals Table
+- id
+- employee_id
+- title
+- description
+- due_date
+- progress
+- status
+
+## Reviews Table
+- id
+- employee_id
+- reviewer_id
+- rating
+- comments
+- review_date
+
+## Feedback Table
+- id
+- employee_id
+- giver_id
+- message
+- created_at
+```
+
+---
+
+# docs/Workflow.md
+
+```markdown
+# SDLC Workflow
+
+1. Requirement Gathering
+2. Planning
+3. System Design
+4. Development
+5. Testing
+6. Deployment
+7. Maintenance
+```
+
+---
+
+# GitHub Issues to Create
+
+Use these:
+
+```text
+Setup Frontend Architecture
+Setup Backend Architecture
+Design Database Schema
+Implement Employee CRUD APIs
+Implement Goal Management Module
+Implement Review Management Module
+Implement Feedback Module
+Develop Dashboard Analytics
+Integrate AI Summary Generator
+Testing and Validation
+Prepare Documentation
+Deployment Setup
+```
+
+---
+
+# GitHub Project Board Columns
+
+```text
+Backlog
+To Do
+In Progress
+Review
+Done
+```
+
+---
+
+# What To Do Next
+
+1. Create `/docs` folder in repo
+2. Add above files
+3. Commit:
+
+```bash
+git add .
+git commit -m "docs: add complete project documentation"
+git push
+```
+
+---
+
+If you want, I can next help you create the **GitHub Issues descriptions professionally** so you can copy-paste them one by one into GitHub.
