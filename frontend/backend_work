@@ -1,0 +1,259 @@
+You are a Senior Backend Engineer and AI System Architect.
+
+Your task is to build a COMPLETE, PRODUCTION‑READY backend for an
+Employee Performance Management System (EPMS) that integrates with an
+already existing React frontend.
+
+====================================================
+FRONTEND CONTEXT (ALREADY BUILT – DO NOT CHANGE)
+====================================================
+
+The frontend is built with:
+- React
+- Context API for global state
+- Fully dynamic rendering
+
+Frontend global state includes:
+- selectedEmployeeId
+- employees
+- goals
+- reviews
+- feedback360
+- performanceMetrics
+- analyticsData
+- aiPerformanceSummary
+
+Frontend pages:
+- Dashboard
+- Goals
+- Reviews
+- Feedback360
+- Analytics
+- EmployeeProfile
+
+The frontend fetches data ONLY via REST APIs (JSON)
+and automatically re-renders when responses change.
+
+====================================================
+BACKEND TECH STACK (MANDATORY)
+====================================================
+
+Language:
+- Python 3.10+
+
+Framework:
+- FastAPI
+- Uvicorn
+
+Database:
+- PostgreSQL (managed using pgAdmin)
+
+ORM:
+- SQLAlchemy
+
+Validation:
+- Pydantic
+
+Environment:
+- python-dotenv
+
+AI:
+- LLM (GPT‑4 / Azure OpenAI or mock if key not present)
+- Architecture must be RAG‑READY (no frontend changes required)
+
+====================================================
+BACKEND PROJECT STRUCTURE (STRICTLY FOLLOW)
+====================================================
+
+backend/
+├── app/
+│   ├── models/
+│   │   ├── employee.py
+│   │   ├── goal.py
+│   │   ├── review.py
+│   │   ├── feedback.py
+│   │   ├── performance_metrics.py
+│   │   └── ai_summary.py
+│   │
+│   ├── schemas/
+│   │   ├── employee_schema.py
+│   │   ├── goal_schema.py
+│   │   ├── review_schema.py
+│   │   ├── feedback_schema.py
+│   │   └── ai_schema.py
+│   │
+│   ├── routes/
+│   │   ├── employee_routes.py
+│   │   ├── goal_routes.py
+│   │   ├── review_routes.py
+│   │   ├── feedback_routes.py
+│   │   ├── metrics_routes.py
+│   │   └── ai_routes.py
+│   │
+│   ├── services/
+│   │   ├── employee_service.py
+│   │   ├── performance_service.py
+│   │   └── analytics_service.py
+│   │
+│   ├── agents/
+│   │   └── performance_review_agent.py
+│   │
+│   ├── database.py
+│   ├── config.py
+│   └── main.py
+│
+├── .env
+└── requirements.txt
+
+====================================================
+DATABASE MODELS (POSTGRESQL)
+====================================================
+
+Employee:
+- id (PK)
+- name
+- role
+- department
+- manager_id
+- joining_date
+- status
+
+Goal:
+- id (PK)
+- employee_id (FK)
+- title
+- type (KPI | OKR | MBO)
+- progress_percentage
+- due_date
+- status
+
+Review:
+- id (PK)
+- employee_id (FK)
+- reviewer_id
+- ratings (JSON)
+- comments
+- review_cycle
+- created_at
+
+Feedback360:
+- id (PK)
+- employee_id (FK)
+- given_by
+- score
+- comment
+
+PerformanceMetrics:
+- employee_id (PK, FK)
+- quantity_metrics (JSON)
+- quality_metrics (JSON)
+- efficiency_metrics (JSON)
+- engagement_metrics (JSON)
+- organizational_metrics (JSON)
+
+AISummary:
+- id (PK)
+- employee_id (FK)
+- summary_text
+- generated_at
+
+====================================================
+REQUIRED REST API ENDPOINTS
+====================================================
+
+Employees:
+- GET    /api/employees
+- GET    /api/employees/{id}
+- POST   /api/employees
+
+Goals:
+- GET    /api/goals/{employee_id}
+- POST   /api/goals
+- PUT    /api/goals/{id}
+
+Reviews:
+- GET    /api/reviews/{employee_id}
+- POST   /api/reviews
+
+Feedback:
+- GET    /api/feedback/{employee_id}
+- POST   /api/feedback
+
+Metrics & Analytics:
+- GET    /api/metrics/{employee_id}
+- GET    /api/analytics/{employee_id}
+
+AI:
+- POST   /api/ai/performance-summary
+
+====================================================
+AI AGENT (MANDATORY)
+====================================================
+
+Implement ONE AI agent:
+"Performance Review Agent"
+
+Location:
+app/agents/performance_review_agent.py
+
+Responsibilities:
+1. Accept employee_id
+2. Fetch employee, goals, reviews, feedback, metrics from PostgreSQL
+3. Build structured prompt (NO hardcoded text)
+4. Call LLM to generate a professional HR performance review
+5. Output must include:
+   - Overall performance
+   - Strengths
+   - Improvement areas
+   - Goal progress
+   - Actionable recommendations
+   - Motivational closing
+6. Tone: professional HR language
+7. Length: 180–250 words
+8. Store summary in AISummary table
+9. Return summary to frontend
+
+====================================================
+RAG READINESS (BACKEND ONLY)
+====================================================
+
+The architecture must allow future RAG integration for:
+- HR policies
+- Promotion guidelines
+- Appraisal rules
+- Training manuals
+
+RAG must NOT replace the database.
+Structured data stays in PostgreSQL.
+RAG will only augment AI context.
+
+====================================================
+FRONTEND ↔ BACKEND CONNECTION RULES
+====================================================
+
+- Frontend communicates ONLY via REST APIs
+- CORS must be enabled
+- All responses must be JSON
+- URLs follow: http://localhost:8000/api/*
+- When selectedEmployeeId changes:
+  - Backend serves employee‑specific data
+  - All dashboards, analytics, and AI summary update dynamically
+
+====================================================
+SECURITY & BEST PRACTICES
+====================================================
+
+- Use .env for DB credentials and API keys
+- Never hardcode secrets
+- Enable FastAPI OpenAPI docs
+- Add global error handling
+- Backend must be authentication‑ready (JWT later)
+
+====================================================
+FINAL GOAL
+====================================================
+
+Deliver a clean, scalable FastAPI backend using Python and PostgreSQL
+that perfectly integrates with the existing React frontend, replaces
+all mock data, supports dynamic updates across all modules, and includes
+an AI-powered (and RAG-ready) Performance Review Agent.

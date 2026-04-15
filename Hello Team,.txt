@@ -1,0 +1,32 @@
+Hello Team,
+
+As discussed in our recent session on the Software Development Life Cycle (SDLC), Satyam has already taken the lead on the project development task. Building on that, I’d like each of you to focus on setting up proper project documentation and tracking to ensure a structured and transparent workflow.
+
+Please complete the following tasks:
+
+1. Create Project Documentation
+Prepare clear and concise project documentation covering the overview, objectives, features, tech stack, and workflow for the project developed during the training phase.
+2. Set Up a GitHub Repository
+Create a dedicated repository for the project.
+Ensure proper naming conventions and include a README file.
+3. Create a GitHub Project Board
+Set up a project board to manage and track progress.
+4. Create Issues for Each Feature
+Break down the project into individual features/tasks.
+Create a separate issue for each feature with a proper description.
+5. Assign Tasks
+Assign each issue to yourself based on the feature you will be working on.
+6. Track Progress
+Regularly update the status of your tasks on the project board to reflect progress.
+
+For guidance on setting up and managing GitHub Projects, please refer to the following documentation:
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects
+
+Please ensure all setups are completed within the agreed timeline. Let me know if you have any questions or need assistance.
+
+Best regards,
+
+Swarang Gorhe 
+AI/ML Software developer 
+Ampcus tech pvt.ltd 
+
