@@ -131,3 +131,119 @@ For non-English text, change lang='en' accordingly.
 ---
 
 If you want structured output (e.g., preserve line breaks/paragraphs instead of joining into one line), I can show you how to format that next.
+
+
+
+
+Good—this is exactly the kind of image **PaddleOCR handles well.
+
+I’ll give you correct modules + clean working code to extract text from this type of image.
+
+
+---
+
+✅ 1. Install Correct Modules
+
+Run this in terminal:
+
+pip install paddlepaddle paddleocr opencv-python pillow
+
+
+---
+
+✅ 2. Working OCR Code (Accurate + Clean)
+
+from paddleocr import PaddleOCR
+import cv2
+
+# Initialize OCR
+ocr = PaddleOCR(use_angle_cls=True, lang='en')
+
+# Load image
+image_path = "test.png"   # <-- replace with your image name
+img = cv2.imread(image_path)
+
+# Run OCR
+result = ocr.ocr(img, cls=True)
+
+# Extract text line by line
+extracted_text = []
+
+for line in result[0]:
+    text = line[1][0]
+    confidence = line[1][1]
+    
+    extracted_text.append(text)
+    print(f"{text} (Confidence: {confidence:.2f})")
+
+# Final combined text
+print("\n--- Final Extracted Text ---")
+print("\n".join(extracted_text))
+
+
+---
+
+✅ 3. Expected Output from Your Image
+
+From your uploaded image, OCR will roughly extract:
+
+This is a lot of 12 point text to test the
+ocr code and see if it works on all types
+of file format.
+The quick brown dog jumped over the ...
+
+(Black boxes will appear as missing/uncertain text — that’s normal.)
+
+
+---
+
+✅ 4. Important Tips (VERY IMPORTANT ⚡)
+
+Your image is slightly blurred + skewed, so accuracy improves if you preprocess:
+
+Add this before OCR:
+
+# Convert to grayscale
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# Optional: threshold for better clarity
+_, thresh = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY)
+
+# Use processed image
+result = ocr.ocr(thresh, cls=True)
+
+
+---
+
+✅ 5. Common Mistakes (Avoid These)
+
+❌ Wrong path (image.png not found)
+
+❌ Not installing paddlepaddle
+
+❌ Using low-quality image
+
+❌ Forgetting cls=True (important for rotated text)
+
+
+
+---
+
+🔥 Best Setup for Your Project
+
+Since you're building backend systems:
+
+Use PaddleOCR + FastAPI
+
+Add preprocessing (OpenCV)
+
+Store extracted text in PostgreSQL
+
+
+
+---
+
+If you want next step, I can help you:
+
+👉 Extract structured data (Name, Date, etc.) from OCR
+👉 Or build complete OCR API backend (production ready)
